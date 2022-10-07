@@ -344,68 +344,17 @@ mark,
 .line1 img {
   position: absolute;
   top: 120px;
-  left: 10px;
+  left: 5px;
   width: 50px;
-}
-
-.line1r img {
-  position: absolute;
-  top: 120px;
-  left: 50%;
-  width: 50px;
-  transform: translateX(-100%);
-}
-
-.line1-impl img {
-  position: absolute;
-  top: 100px;
-  left: 425px;
-  width: 50px;
-  transform: rotate(45deg);
-}
-
-.line1-generics img {
-  position: absolute;
-  top: 100px;
-  left: 575px;
-  width: 50px;
-  transform: rotate(45deg);
 }
 
 .line2 img {
   position: absolute;
-  top: 152px;
+  top: 140px;
   left: 10px;
   width: 50px;
 }
 
-.line2r img {
-  position: absolute;
-  top: 152px;
-  left: 50%;
-  width: 50px;
-  transform: translateX(-100%);
-}
-
-.line2-data img {
-  position: absolute;
-  top: 125px;
-  left: 675px;
-  width: 50px;
-  transform: rotate(45deg);
-}
-
-.annotate-data {
-  position: absolute;
-  top: 200px;
-  left: 600px;
-}
-
-.annotate-send {
-  position: absolute;
-  top: 200px;
-  left: 400px;
-}
 
 .line3 img {
   position: absolute;
@@ -414,21 +363,6 @@ mark,
   width: 50px;
 }
 
-.line3r img {
-  position: absolute;
-  top: 183px;
-  left: 50%;
-  width: 50px;
-  transform: translateX(-100%);
-}
-
-.line3-regalo img {
-  position: absolute;
-  top: 220px;
-  left: 220px;
-  width: 50px;
-  transform: rotate(270deg);
-}
 
 .line4 img {
   position: absolute;
@@ -521,3 +455,58 @@ blockquote p {
 }
 
 .group {}
+
+
+
+.arg1 img {
+  position: absolute;
+  top: 95px;
+  left: 120px;
+  width: 50px;
+  transform: rotate(45deg);
+}
+
+.bb0 img {
+  position: absolute;
+  top: 290px;
+  left: 10px;
+  width: 50px;
+}
+
+.addition img {
+  position: absolute;
+  top: 320px;
+  left: 10px;
+  width: 50px;
+}
+
+.move41 img {
+  position: absolute;
+  top: 380px;
+  left: 10px;
+  width: 50px;
+}
+
+.movekw img {
+  position: absolute;
+  top: 360px;
+  left: 220px;
+  width: 50px;
+  transform: rotate(135deg);
+}
+
+.turbofish img {
+  position: absolute;
+  top: 440px;
+  left: 300px;
+  width: 50px;
+  transform: rotate(235deg);
+}
+
+.branchbb1 img {
+  position: absolute;
+  top: 440px;
+  left: 500px;
+  width: 50px;
+  transform: rotate(235deg);
+}
