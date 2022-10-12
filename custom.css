@@ -358,7 +358,14 @@ mark,
 
 .line3 img {
   position: absolute;
-  top: 183px;
+  top: 170px;
+  left: 10px;
+  width: 50px;
+}
+
+.line3s img {
+  position: absolute;
+  top: 180px;
   left: 10px;
   width: 50px;
 }
@@ -366,14 +373,28 @@ mark,
 
 .line4 img {
   position: absolute;
-  top: 212px;
+  top: 200px;
   left: 10px;
   width: 50px;
 }
 
 .line5 img {
   position: absolute;
-  top: 245px;
+  top: 235px;
+  left: 10px;
+  width: 50px;
+}
+
+.line6 img {
+  position: absolute;
+  top: 285px;
+  left: 10px;
+  width: 50px;
+}
+
+.line6s img {
+  position: absolute;
+  top: 265px;
   left: 10px;
   width: 50px;
 }
@@ -381,6 +402,34 @@ mark,
 .line7 img {
   position: absolute;
   top: 300px;
+  left: 10px;
+  width: 50px;
+}
+
+.line8 img {
+  position: absolute;
+  top: 325px;
+  left: 10px;
+  width: 50px;
+}
+
+.line9 img {
+  position: absolute;
+  top: 350px;
+  left: 10px;
+  width: 50px;
+}
+
+.line9s img {
+  position: absolute;
+  top: 340px;
+  left: 10px;
+  width: 50px;
+}
+
+.line10 img {
+  position: absolute;
+  top: 375px;
   left: 10px;
   width: 50px;
 }
@@ -480,6 +529,13 @@ blockquote p {
   width: 50px;
 }
 
+.store img {
+  position: absolute;
+  top: 350px;
+  left: 10px;
+  width: 50px;
+}
+
 .move41 img {
   position: absolute;
   top: 380px;
@@ -509,4 +565,28 @@ blockquote p {
   left: 500px;
   width: 50px;
   transform: rotate(235deg);
+}
+
+.subtype4 img {
+  position: absolute;
+  top: 210px;
+  left: 400px;
+  width: 50px;
+  transform: rotate(135deg);
+}
+
+.datau32 img {
+  position: absolute;
+  top: 210px;
+  left: 210px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+.tdebug img {
+  position: absolute;
+  top: 320px;
+  left: 130px;
+  width: 50px;
+  transform: rotate(90deg);
 }
