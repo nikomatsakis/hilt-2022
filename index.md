@@ -834,9 +834,9 @@ Redex is great, but not familiar for Rust developers.
 
 Have used formality...
 
-* **to model coinductive trait matching**
+* to model coinductive trait matching
 * to model negative impls
-* **to model borrow checker extensions**
+* to model borrow checker extensions
 
 ---
 
@@ -852,28 +852,17 @@ Have used formality...
 
 # Negative impls
 
-```rust
-// Crate A
-trait Error { }
-
-// Crate B
-impl<T> Error for T {
-
-}
-impl<T> !Display for T {
-    
-}
-```
+* Allow people to declare that a trait is intentionally NOT implemented
+* Modeling it in a-mir-formality revealed an interaction with coinduction
+* Still working out best solution
 
 ---
 
 # Borrow checker extensions
 
 * Polonius, a new version of Rust borrow checker
-* Modeling the existing borrow checker in a-mir-formality:
-    * Was able to show the connection between old and new
+* Modeling in a-mir-formality helped clarify connection between old and new
 * Will be modeling the new system to define expected behavior
-    * and adding examples as we go
 
 ---
 
@@ -882,3 +871,57 @@ impl<T> !Display for T {
 * Working towards a complete formal model for Rust type system
 * Plan to integrate model into Rust's development process
     * New language features will be modeled before stabilized
+
+---
+
+# Extra slides: Coinductive trait matching details
+
+---
+
+# Coinductive trait matching
+
+```rust
+trait Clone {
+    fn clone(&self) -> Self;
+}
+
+impl<T: Clone> Clone for Vec<T> {}
+
+impl<T> Clone for Rc<T> {
+    /* just increment ref count */
+}
+```
+
+---
+
+# Coinductive trait matching
+
+```rust
+#[derive(Clone)]
+struct YourStruct<T> {
+    children: Vec<T>
+}
+
+// autogenerates:
+impl<T: Clone> Clone for YourStruct<T> {
+//   ^^^^^^^^ do we need this bound?    
+}
+```
+
+---
+
+# Coinductive trait matching
+
+```rust
+#[derive(Clone)]
+struct YourStruct<T> {
+    data: Rc<T>
+}
+
+// autogenerates:
+impl<T> Clone for YourStruct<T>
+where
+    Rc<T>: Clone // do this for each field
+{
+}
+```
